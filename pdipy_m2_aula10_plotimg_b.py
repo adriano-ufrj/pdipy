@@ -132,3 +132,6 @@ imshow(stack2, (1, 2, 0))
 
 # Fim de código
 
+# Contato: contato@contatos.com.br
+# Telefone: 21 99998 1111
+
