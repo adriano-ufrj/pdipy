@@ -11,6 +11,8 @@ Original file is located at
 
 # Primeiro passo é instalar bibliotecas que não estão no Colab.
 
+
+# Visualizando com GDAL
 !pip install gdal
 !pip install rasterio
 
@@ -109,6 +111,8 @@ rst = rasterio.open('/content/drive/MyDrive/arcprojects/PDIPy_Curso/Img_L7/L7122
 
 print(rst)  # é um dataset reader. Portanto, para visualizar terá que ser feito as mesmas conversões que o GDAL.
 
+
+# Visualizando no Rasterio
 # No entanto, o rasterio tem um módulo próprio para visualização: plot - show
 show(rst, cmap='Greys_r') # Este método faz a leitura das coordenadas da imagem, que neste caso são coordenadas UTM.
 # Como não foi configurado a banda para visualização, o default é mostrar a banda 1 - Azul
@@ -124,4 +128,7 @@ b6 = rst.read(6)
 stack2 = np.dstack((b1,b2,b4))
 
 imshow(stack2, (1, 2, 0))
+
+
+# Fim de código
 
